@@ -10,7 +10,7 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
-
+// karthucj
 function Footer() {
   return (
     <>
