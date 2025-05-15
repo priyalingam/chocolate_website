@@ -1,0 +1,161 @@
+body{
+    
+    margin: 0%;
+    padding: 0;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    padding: 10px 20px 0px 20px;
+}
+.header-icon{
+    width: 20%;
+    text-align: left;
+}
+.header-icon img{
+    width:60%;
+    height: 60px;
+}
+.header-nav-link{
+    width: 50%;
+    text-align: center;
+}
+
+.header-nav-link .anchor{
+    padding: 20px;
+    text-decoration: none;
+    color: #c19f5f ;
+    font-family: 'Mulish';
+   
+   
+  
+    
+
+}
+
+.color-change{
+    background-color: #000;
+    height: 110px;
+    padding-top: 0px;
+}
+
+.header-nav-link .anchor:hover{
+    color: white;
+}
+.active-link{
+    color: black;
+}
+
+.header-contact{
+    width: 20%;
+    display: flex;
+    gap: 10px;
+ justify-content: end;
+    align-items: baseline;
+    margin-top:20px;
+  
+    color: #926819;
+
+
+}
+.header-contact p {
+    font-size: 13px;
+     font-family: 'Mulish';
+
+}
+
+.header-nav::after{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    height: 6px;
+    top: 100px;
+    left: 80px;
+    right: 80px;
+    z-index: 1;
+    display: block;
+    background-image: url(../../../../assets/design.png);
+   ;
+}
+
+
+
+.active{
+    color: whitesmoke !important;
+}
+
+/* Responsive */
+.header-icons{
+    display: none;
+}
+
+@media (max-width:992px) {
+    .header-nav-link,.header-contact{
+        display: none;
+    }
+    .header-icons{
+        display: block;
+        color: white;
+        font-size: 30px;
+        z-index: 99999;
+    }
+    .header-nav{
+         justify-content: space-between;
+    }
+}
+
+/* Drawer content */
+.drawer-content {
+    width: 250px;
+    padding: 20px;
+    background-color: #000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+      z-index: 99999;
+}
+
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.drawer-logo {
+    height: 40px;
+}
+
+.drawer-close-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: wheat;
+}
+
+.drawer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.drawer-link {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.drawer-link.active {
+    color: #007BFF;
+}
+

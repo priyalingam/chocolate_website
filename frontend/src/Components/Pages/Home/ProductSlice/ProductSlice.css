@@ -1,0 +1,110 @@
+.home-product-container{
+    background-color: black;
+    padding: 0%;
+    margin: 0%;
+    color: white;
+     font-family: 'Cormorant';
+     text-align: center;
+}
+
+.home-product-heading h3{
+    margin-bottom: 0%;
+    font-size: 50px;
+    margin: 0px;
+       font-family: 'Cormorant';
+       font-weight: 300;
+       
+}
+.home-product-heading p{
+    padding: 20px;
+   color: #926819;
+   font-size: 28px;
+   font-style: italic;
+   margin: 0px;
+     font-family: 'Cormorant';
+      text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color:#926819;
+    text-underline-offset: 1.2rem;
+}
+
+.home-product-card{
+    width: 25%;
+    padding: 20px;
+    margin-top: 20px;
+    
+    
+
+}
+.home-product-card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+   text-align: center;
+    gap: 30px;
+    width: 100%;
+    background-color: black;
+    
+}
+.home-image-container{
+    width:100%;
+    
+
+}
+.home-image-container img{
+    width: 80%;
+    height: 100px;
+}
+.Product-card-heading{
+    color: white;
+       font-family: 'Cormorant';
+       margin-top: 10px;
+
+}
+
+.Product-price {
+    color: #926819;
+     font-family: 'Cormorant';
+     font-size: 22px;
+     padding-bottom: 20px;
+}
+
+
+/* ---------------- Responsive Styles ---------------- */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .product-card {
+        width: 40%;
+    }
+
+    .home-product-heading h3 {
+        font-size: 36px;
+    }
+
+    .home-product-heading p {
+        font-size: 24px;
+    }
+}
+
+/* Phones */
+@media screen and (max-width: 768px) {
+    .product-card {
+        width: 90%;
+    }
+
+    .home-product-heading h3 {
+        font-size: 28px;
+    }
+
+    .home-product-heading p {
+        font-size: 20px;
+        text-underline-offset: 0.6rem;
+    }
+
+    .chef-button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+}

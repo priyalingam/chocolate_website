@@ -1,0 +1,49 @@
+.about-parallex{
+    background-image: url(../../../../assets/Headerparallex1.png);
+    min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+         
+         font-family: 'Cormorant';
+          display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cormorant';
+    position: relative;
+            
+            
+}
+.about-parallex h2{
+    width: 70%;
+    font-size: 80px;
+    text-align: center;
+    color: white;
+}
+.about-parallex h2>span{
+    color: #926819;
+    font-style: italic;
+     
+}
+
+
+
+/* ---------- Responsive Styles ---------- */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .about-parallex h2 {
+        font-size: 50px;
+        padding: 0 10px;
+    }
+}
+
+/* Phones */
+@media screen and (max-width: 768px) {
+
+
+    .about-parallex h2 {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,81 @@
+.caro-img{
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-caption{
+ bottom: 200px!important;
+}
+.Caro-header-style h3{
+     font-family: 'Cormorant';
+     font-size: 80px;
+
+}
+.Caro-header-style h2{
+     font-family: 'Cormorant';
+     color: #926819;
+     font-style: italic;
+      font-size: 80px;
+
+}
+.caro-btn{
+    background-color: black;
+    color: #926819;
+    padding: 20px;
+    border: 1px solid #926819;
+    border-radius: 30px;
+}
+
+.caro-btn:hover{
+     border: 1px solid  white;
+    border-radius: 30px;
+      color: white;
+
+}
+
+/* ---------- Responsive Styles ---------- */
+
+/* Large screens (desktops, laptops) */
+@media screen and (min-width: 1200px) {
+    .carousel-caption {
+        bottom: 200px !important;
+    }
+}
+
+/* Medium screens (tablets) */
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+    .carousel-caption {
+        bottom: 150px !important;
+    }
+
+    .Caro-header-style h3,
+    .Caro-header-style h2 {
+        font-size: 50px;
+    }
+
+    .caro-btn {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+/* Small screens (phones) */
+@media screen and (max-width: 767px) {
+    .carousel-caption {
+        bottom: 100px !important;
+        padding: 0 10px;
+    }
+
+    .Caro-header-style h3,
+    .Caro-header-style h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .caro-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+        display: block;
+        margin: 0 auto;
+    }
+}
