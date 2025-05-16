@@ -12,6 +12,16 @@ import { FaLocationDot } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
 // karthucj
 function Footer() {
+
+  const email = "someone@example.com";
+  const subject = "Hello";
+  const body = "I want to get in touch with you.";
+
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+
+
+
+  
   return (
     <>
       <div className="footer-container">
@@ -54,7 +64,8 @@ function Footer() {
               </div>
               <div className="explore-text">
                 <p>Phone</p>
-                <h4>+49078-039-23-11</h4>
+                <a href="tel:+91 987-6543-210" style={{textDecoration:"None",color:"white"}}><h4>+91 98765 43210</h4></a>
+              
 
               </div>
             </div>
@@ -64,7 +75,14 @@ function Footer() {
               </div>
               <div className="explore-text">
                 <p> Our Location</p>
-                <h4>975 Liberty Ave, Union, NJ 07083, USA</h4>
+                 <a
+  href="https://maps.google.com/maps?q=opposite+to+Meenakshi+Amma+temple%2CMadurai"
+  target="_blank"
+  rel="noopener noreferrer" style={{textDecoration:"None",color:"white"}}
+>
+   <h4>Opposite to Meenakshi Amman Temple, Madurai</h4>
+</a>
+                
               </div>
             </div>
             <div className="footer-explore-details">
@@ -73,8 +91,11 @@ function Footer() {
               </div>
               <div className="explore-text">
                 <p>Email</p>
-                <h4>crems@like-themes.com
+                <a href={gmailLink} target="_blank" rel="noopener noreferrer" style={{textDecoration:"None",color:"white"}}>
+       <h4>priyalingam2612@gmail.com
                 </h4>
+    </a>
+               
               </div>
             </div>
           </div>

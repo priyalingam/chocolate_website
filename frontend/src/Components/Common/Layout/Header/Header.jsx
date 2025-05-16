@@ -54,8 +54,9 @@ setOpen(true)
 
     </div>
     <div className="header-contact">
-        <p>CONTACT</p>
-        <span>+91 98765 43210</span>
+        
+         <a href="tel:+91 987-6543-210" style={{textDecoration:"None"}}><span>📞 Call Now</span></a>
+        
         
 
     </div>
@@ -79,6 +80,9 @@ setOpen(true)
                         <Link to="/about" onClick={drawerClose} className={`drawer-link ${location.pathname === "/about" ? "active" : ""}`}>About</Link>
                         <Link to="/product" onClick={drawerClose} className={`drawer-link ${location.pathname === "/product" ? "active" : ""}`}>Product</Link>
                         <Link to="/contact" onClick={drawerClose} className={`drawer-link ${location.pathname === "/contact" ? "active" : ""}`}>Contact</Link>
+
+                                 <a href="tel:+91 987-6543-210" style={{textDecoration:"None",color:"#926819"}}><span>📞 Call Now</span></a>
+
                     </div>
                 </div>
             </Drawer>

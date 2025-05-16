@@ -61,15 +61,42 @@ body{
     gap: 10px;
  justify-content: end;
     align-items: baseline;
-    margin-top:20px;
+    font-family: 'Mulish';
+
   
-    color: #926819;
+    color: #c19f5f;
+    
+
+    perspective: 1000px;
 
 
 }
-.header-contact p {
-    font-size: 13px;
-     font-family: 'Mulish';
+.header-contact>a{
+
+ 
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    /* text-shadow: 
+        1px 1px 0px #926819, 
+        3px 3px 0px #926819;  */
+        /* 3px 3px 0px #fcbf49, 
+        4px 4px 0px #a8dadc, 
+        5px 5px 0px #457b9d; */
+    transform: rotateY(90deg);
+    transform-style: preserve-3d;
+    animation: spin-3d 4s infinite linear;
+    color: #c19f5f;
+}
+
+@keyframes spin-3d {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(90deg);
+    }
 
 }
 

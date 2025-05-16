@@ -58,7 +58,7 @@ function About() {
           </div>
    
         </div>
-        <button className="chef-button" onClick={handlechef}>Read More</button>
+        <button className="chef-button" onClick={handlechef}>Contact Us</button>
         
       </div>
     

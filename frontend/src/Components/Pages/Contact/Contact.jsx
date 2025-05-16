@@ -7,74 +7,59 @@ import { MdEmail } from "react-icons/md";
 import { SiClockify } from "react-icons/si";
 import Footer from "../../Common/Layout/Footer/Footer";
 import Headerbg from "../../Common/Layout/Headerbg/Headerbg";
-import emailjs from "emailjs-com";
+
 function Contact() {
-  const form = useRef();
+  // Email Link
 
- 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
+  const email = "someone@example.com";
+  const subject = "Hello";
+  const body = "I want to get in touch with you.";
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    const { name, email, message } = formData;
-    console.log(name,email,message)
-
-    if (!name || !email || !message) {
-      setError("Please fill in all fields.");
-      setSuccess("");
-      return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
-
-    if (message.length < 10) {
-      setError("Message must be at least 10 characters long.");
-      return;
-    }
-
- 
-  };
+  //form
+  
 
   return (
     <>
-      <Header />
+      {/* <Header />
       <Headerbg title={"Contact"} />
       <div className="footer-address-details">
         <div className="footer-icon">
           <FaLocationDot className="footer-icon-style" />
           <h3>Location</h3>
 
-          <p>29 Nicolas str, New York,</p>
-          <p> 987597-50</p>
+          <a
+            href="https://maps.google.com/maps?q=opposite+to+Meenakshi+Amma+temple%2CMadurai"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "None" }}
+          >
+            <p>Opposite to Meenakshi Amman Temple, Madurai</p>
+          </a>
         </div>
         <div className="footer-icon">
           <BiSolidPhoneCall className="footer-icon-style" />
           <h3>Phones</h3>
 
-          <p>0(800) 890-90-609</p>
-          <p>0(800) 890-90-620</p>
+          <a
+            href="tel:+91 987-6543-210"
+            style={{ textDecoration: "None", color: "white" }}
+          >
+            <p>+91 98765 43210</p>
+          </a>
         </div>
         <div className="footer-icon">
           <MdEmail className="footer-icon-style" />
           <h3>Email</h3>
-
-          <p>sale@like-themes.com</p>
-          <p>tech@like-themes.com</p>
+          <a
+            href={gmailLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "None", color: "white" }}
+          >
+            <p>priyalingam2612@gmail.com</p>
+          </a>
         </div>
         <div className="footer-icon">
           <SiClockify className="footer-icon-style" />
@@ -89,10 +74,10 @@ function Contact() {
           <iframe
             loading="lazy"
             allowfullscreen
-            src="https://maps.google.com/maps?q=Hello+technologies%2Cguru+theatre+%2Cmadurai&output=embed"
+            src="https://maps.google.com/maps?q=opposite+to+Meenakshi+Amma+temple%2CMadurai&output=embed"
           ></iframe>
         </div>
-      </div>
+      </div> */}
       <div className="contact-form">
         <p>Feedback</p>
         <h3>Leave Your Review</h3>
@@ -101,42 +86,38 @@ function Contact() {
           <form
             action=""
             className="form-style"
-            onSubmit={sendEmail}
-            ref={form}
+            
+            
           >
             <div className="contatct-name-email">
               <input
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                onChange={handleChange}
-                value={formData.name}
+               
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                onChange={handleChange}
-                value={formData.email}
+               
               />
             </div>
 
             <textarea
               name="message"
               placeholder="Message"
-              value={formData.message}
-              onChange={handleChange}
+              
             ></textarea>
             <button type="submit" className="contact-button">
               Submit
             </button>
-            <br />
-            {error && <p className="error-message">{error}</p>}
-            {success && <p className="success-message">{success}</p>}
+            
+           
           </form>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
