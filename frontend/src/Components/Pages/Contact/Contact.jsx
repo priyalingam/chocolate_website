@@ -11,11 +11,11 @@ import Headerbg from "../../Common/Layout/Headerbg/Headerbg";
 function Contact() {
   // Email Link
 
-  // const email = "someone@example.com";
-  // const subject = "Hello";
-  // const body = "I want to get in touch with you.";
+  const email = "someone@example.com";
+  const subject = "Hello";
+  const body = "I want to get in touch with you.";
 
-  // const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
 
   // form-to handle values
   const [contactdetails, setContactdetail] = useState({
