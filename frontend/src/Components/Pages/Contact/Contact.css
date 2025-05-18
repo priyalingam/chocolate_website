@@ -132,6 +132,11 @@
   color: white;
 }
 
+.input-error{
+  color: red;
+  font-size: 18px;
+}
+
 
 
 /* ---------- Responsive Media Queries ---------- */

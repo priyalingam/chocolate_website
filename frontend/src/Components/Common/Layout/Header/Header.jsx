@@ -28,14 +28,14 @@ function Header() {
 
     const location=useLocation()
 
-    console.log(location)
+  
 
     const drawerOpen=()=>{
 setOpen(true)
     }
 
 
-    console.log(open)
+    // console.log(open)
     const drawerClose = () => setOpen(false);
 
   return (
