@@ -50,7 +50,7 @@ function Contact() {
       let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       let mail = fieldValue;
       if (!regex.test(mail)) {
-        message = "email is Invaild";
+        message = "Email is Invaild";
       } else {
         message = "";
       }
@@ -118,7 +118,7 @@ function Contact() {
           ...pre,
           name: "Name is required",
           email: "Email is required",
-            message: "message is required",
+            message: "Message is required",
         };
       });
 
@@ -148,7 +148,7 @@ function Contact() {
       setError((pre) => {
         return {
           ...pre,
-          message: "message is required",
+          message: "Message is required",
         };
       });
        return
@@ -157,7 +157,7 @@ function Contact() {
       setError((pre) => {
         return {
           ...pre,
-          email: "Fill the email field",
+          email: "Fill the Email field",
         };
       });
        return
@@ -167,7 +167,7 @@ function Contact() {
       setError((pre) => {
         return {
           ...pre,
-          name: "Fill the name feild",
+          name: "Fill the Name feild",
         };
       });
        return
@@ -177,7 +177,7 @@ function Contact() {
       setError((pre) => {
         return {
           ...pre,
-          message: "Fill the message field",
+          message: "Fill the Message field",
         };
       });
        return
@@ -260,10 +260,12 @@ setError({ name: "", email: "", message: "" });
         <div className="contact-form-detail">
           <form action="" className="form-style">
             <div className="contatct-name-email">
-              <input
+            <div className="contact-name-email-style">
+               <input
                 type="text"
                 name="name"
                 placeholder="Your Name"
+                value={contactdetails.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 onKeyDown={(e) => {
@@ -277,9 +279,13 @@ setError({ name: "", email: "", message: "" });
               />
             
               <p className="input-error">{error.name}</p>
-              <input
+
+            </div>
+            <div className="contact-name-email-style">
+               <input
                 type="text"
                 name="email"
+                value={contactdetails.email}
                 placeholder="Your Email"
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -289,12 +295,17 @@ setError({ name: "", email: "", message: "" });
               />
            
                <p className="input-error">{error.email}</p>
+
+            </div>
+             
+             
             </div>
 
 
             <textarea
               name="message"
               placeholder="Message"
+              value={contactdetails.message}
               onChange={handleChange}
               onBlur={handleBlur}
               onKeyDown={(e) => {

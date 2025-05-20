@@ -80,6 +80,7 @@
 .contact-form-detail {
   display: flex;
   justify-content: center;
+ 
 }
 
 .form-style {
@@ -94,6 +95,10 @@
   display: flex;
   gap: 10px;
   flex-direction: row;
+  justify-content: space-between;
+}
+.contact-name-email-style{
+  width:50%;
 }
 
 .contatct-name-email input {
@@ -103,7 +108,10 @@
   border: 1px solid gray;
   background-color: black;
   color: gray;
+  width: 100%;
 }
+
+
 
 .form-style textarea {
   padding: 15px;
