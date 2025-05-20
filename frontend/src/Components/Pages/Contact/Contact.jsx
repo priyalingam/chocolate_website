@@ -102,11 +102,22 @@ function Contact() {
 
   const handleKeyDown = (e) => {
     const key = e.key;
+     const { name, value } = e.target;
+
 
     // Prevent space as first character
     const input = e.target;
     if (key === " " && input.selectionStart === 0) {
       e.preventDefault();
+    }
+
+    if(name==="name"){
+      const isvalidName =
+        /^[a-zA-Z\s]$/.test(key) ||
+        ["Backspace", "Tab", "ArrowLeft", "ArrowRight"].includes(key);
+      if (!isvalidName) {
+        e.preventDefault();
+      }
     }
   };
   // to handle the submit
@@ -192,6 +203,9 @@ function Contact() {
 setError({ name: "", email: "", message: "" });
   };
 
+
+  
+
   console.log(error);
   console.log(contactdetails);
 
@@ -268,14 +282,8 @@ setError({ name: "", email: "", message: "" });
                 value={contactdetails.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                onKeyDown={(e) => {
-                  handleKeyDown(e);
-
-                  const key = e.key;
-                  if (!/^[a-zA-Z]$/.test(key)) {
-                    e.preventDefault();
-                  }
-                }}
+                onKeyDown={handleKeyDown}
+               
               />
             
               <p className="input-error">{error.name}</p>
@@ -289,9 +297,8 @@ setError({ name: "", email: "", message: "" });
                 placeholder="Your Email"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                onKeyDown={(e) => {
-                  handleKeyDown(e);
-                }}
+                onKeyDown={handleKeyDown}
+                
               />
            
                <p className="input-error">{error.email}</p>
