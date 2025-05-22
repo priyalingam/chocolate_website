@@ -10,7 +10,7 @@ function Productdetail() {
     const {state}=useLocation()
     // console.log(state)
  const handlenavigate=()=>{
-    navigate('/contact')
+    navigate('/product')
  }
   return (
  <>
